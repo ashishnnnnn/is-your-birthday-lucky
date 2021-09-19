@@ -7,6 +7,11 @@ button.addEventListener("click", function verify_dob() {
   var lucky_number = Number(number.value);
   message.innerText = "";
   var sum = sum_of_dates(dob.value);
+  if (sum == 0) {
+    message.style.color = "red";
+    message.innerText = "Please Select your Birthday";
+    return;
+  }
   if (lucky_number <= 0) {
     message.style.color = "red";
     message.innerText = "Please Enter Positive value as Lucky Number";
